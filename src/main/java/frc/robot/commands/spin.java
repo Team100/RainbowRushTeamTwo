@@ -32,8 +32,8 @@ public class spin extends CommandBase {
     public void execute() {
         arm.spin(controller.getRightX());
         arm.driveHorizontal(controller.getLeftY());
-        arm.driveVertical(controller.getRightTriggerAxis());
-        arm.driveVertical(-controller.getLeftTriggerAxis());
+        arm.driveVertical(controller.getRightX());
+        // arm.driveVertical(-controller.getLeftTriggerAxis());
 
     }
 

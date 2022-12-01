@@ -14,7 +14,7 @@ public class Claw extends SubsystemBase {
 
   // Creates a new Claw.
   public Claw() {
-    openMotor = new FRCTalonSRX.FRCTalonSRXBuilder(5)
+    openMotor = new FRCTalonSRX.FRCTalonSRXBuilder(1)
         .withInverted(false)
         .withFeedbackPort(0)
         .withTimeout(10)
