@@ -28,9 +28,9 @@ public class RobotContainer {
   Claw claw = new Claw();
     open open = new open(claw);
     close close = new close(claw);
-  XboxController controller = new XboxController(2);
-    final JoystickButton openButton = new JoystickButton(controller, 3); //A
-    final JoystickButton closeButton = new JoystickButton(controller, 4); //B
+  XboxController controller = new XboxController(0);
+    final JoystickButton openButton = new JoystickButton(controller, 1); //A
+    final JoystickButton closeButton = new JoystickButton(controller, 2); //B
   
   spin spin = new spin(arm, controller);
 
@@ -38,10 +38,10 @@ public class RobotContainer {
   public RobotContainer() {
     // Configure the button bindings
     configureButtonBindings();
-    openButton.whileHeld(open);
-    closeButton.whileHeld(close);
+    // openButton.whileHeld(open);
+    // closeButton.whileHeld(close);
 
-    arm.setDefaultCommand(spin);
+     arm.setDefaultCommand(spin);
 
   }
   /**

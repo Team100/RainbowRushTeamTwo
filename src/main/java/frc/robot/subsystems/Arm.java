@@ -14,7 +14,7 @@ public class Arm extends SubsystemBase {
 
   /** Creates a new Arm. */
   public Arm() {
-    verticalMotor = new FRCTalonFX.FRCTalonFXBuilder(3)
+    verticalMotor = new FRCTalonFX.FRCTalonFXBuilder(7)
         // .withInverted(false)
         .withFeedbackPort(0)
         .withSensorPhase(false)
@@ -26,7 +26,7 @@ public class Arm extends SubsystemBase {
         .withPeakOutputReverse(-0.1)
         // .withNeutralMode()
         .build();
-    horizontalMotor = new FRCTalonFX.FRCTalonFXBuilder(7)
+    horizontalMotor = new FRCTalonFX.FRCTalonFXBuilder(15)
         // .withInverted(false)
         .withFeedbackPort(0)
         .withSensorPhase(false)
