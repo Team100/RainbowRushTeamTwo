@@ -14,7 +14,7 @@ public class Claw extends SubsystemBase {
 
   // Creates a new Claw.
   public Claw() {
-    openMotor = new FRCTalonSRX.FRCTalonSRXBuilder(1)
+    openMotor = new FRCTalonSRX.FRCTalonSRXBuilder(5)
         .withInverted(false)
         .withFeedbackPort(0)
         .withTimeout(10)
@@ -30,7 +30,7 @@ public class Claw extends SubsystemBase {
     addChild("ClawstopButton", stopButton);
   }
 
-  public void open(double x) {
+  public void move(double x) {
     openMotor.drivePercentOutput(x);
   }
 

@@ -7,16 +7,19 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.Arm;
+import frc.robot.subsystems.Claw;
 
 public class spin extends CommandBase {
     /** Creates a new spin. */
     Arm arm;
+    Claw claw;
     XboxController controller;
 
-    public spin(Arm o, XboxController c) {
+    public spin(Arm o, XboxController c, Claw u) {
         // Use addRequirements() here to declare subsystem dependencies.
         arm = o;
         controller = c;
+        claw = u;
 
         addRequirements(arm);
     }
@@ -33,6 +36,7 @@ public class spin extends CommandBase {
         arm.spin(controller.getRightX());
         arm.driveHorizontal(controller.getLeftY());
         arm.driveVertical(controller.getRightX());
+        claw.move(controller.getButtonCount());
         // arm.driveVertical(-controller.getLeftTriggerAxis());
 
     }

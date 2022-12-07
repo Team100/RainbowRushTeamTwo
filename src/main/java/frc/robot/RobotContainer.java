@@ -32,16 +32,16 @@ public class RobotContainer {
     final JoystickButton openButton = new JoystickButton(controller, 1); //A
     final JoystickButton closeButton = new JoystickButton(controller, 2); //B
   
-  spin spin = new spin(arm, controller);
+  // spin spin = new spin(arm, controller);
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
     // Configure the button bindings
     configureButtonBindings();
-    // openButton.whileHeld(open);
+    openButton.whileTrue(open);
     // closeButton.whileHeld(close);
 
-     arm.setDefaultCommand(spin);
+    // arm.setDefaultCommand(spin);
 
   }
   /**

@@ -24,9 +24,9 @@ public class close extends CommandBase {
   @Override
   public void execute() {
     if(openMotor.isOpen()== true){
-      openMotor.open(-0.2);
+      openMotor.move(-0.2);
     }else{
-      openMotor.open(0);
+      openMotor.move(0);
     }
       
    
@@ -35,7 +35,7 @@ public class close extends CommandBase {
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
-    openMotor.open(0);
+    openMotor.move(0);
   }
 
   // Returns true when the command should end.

@@ -14,6 +14,8 @@ public class open extends CommandBase {
   public open(Claw o  ) {
     // Use addRequirements() here to declare subsystem dependencies.
     openMotor = o;
+
+    
   }
 
   // Called when the command is initially scheduled.
@@ -28,7 +30,7 @@ public class open extends CommandBase {
     // }else{
     //   openMotor.open(0);
     // }
-    openMotor.open(0.2);
+    openMotor.move(0.2);
       
    
   }
@@ -36,7 +38,7 @@ public class open extends CommandBase {
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
-    openMotor.open(0);
+    openMotor.move(0);
   }
 
   // Returns true when the command should end.
