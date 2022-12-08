@@ -12,14 +12,14 @@ import frc.robot.subsystems.Claw;
 public class spin extends CommandBase {
     /** Creates a new spin. */
     Arm arm;
-    Claw claw;
+    
     XboxController controller;
 
-    public spin(Arm o, XboxController c, Claw u) {
+    public spin(Arm o, XboxController c) {
         // Use addRequirements() here to declare subsystem dependencies.
         arm = o;
         controller = c;
-        claw = u;
+        //claw = u;
 
         addRequirements(arm);
     }
@@ -35,8 +35,8 @@ public class spin extends CommandBase {
     public void execute() {
         arm.spin(controller.getRightX());
         arm.driveHorizontal(controller.getLeftY());
-        arm.driveVertical(controller.getRightX());
-        claw.move(controller.getButtonCount());
+        arm.driveVertical(controller.getRightY());
+       // claw.move(controller.getButtonCount());
         // arm.driveVertical(-controller.getLeftTriggerAxis());
 
     }

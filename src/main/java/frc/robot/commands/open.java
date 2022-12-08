@@ -30,7 +30,7 @@ public class open extends CommandBase {
     // }else{
     //   openMotor.open(0);
     // }
-    openMotor.move(0.2);
+    openMotor.move(0.6);
       
    
   }
